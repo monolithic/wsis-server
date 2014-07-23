@@ -1,0 +1,451 @@
+@charset "utf-8";
+body {
+	font: 100%/1.4 Verdana, Arial, Helvetica, sans-serif;
+	background: #42413C;
+	margin: 0;
+	padding: 0;
+/* 	color: #000; */
+	color: #444444;
+}
+body {
+	background-color: #8CCD6B;
+	background-image: url("../images/body_bg_repeat.png?id=1332479173812");
+	background-position: 0 0;
+	background-repeat: repeat-x;
+}
+/* ~~ 元素/标签选择器 ~~ */
+ul, ol, dl { /* 由于浏览器之间的差异，最佳做法是在列表中将填充和边距都设置为零。为了保持一致，您可以在此处指定所需的数值，也可以在列表包含的列表项（LI、DT 和 DD）中指定所需的数值。请记住，除非编写一个更具体的选择器，否则，在此处进行的设置将层叠到 .nav 列表。 */
+	padding: 0;
+	margin: 0;
+}
+h1, h2, h3, h4, h5, h6, p {
+	margin-top: 0;	 /* 删除上边距可以解决边距会超出其包含的块的问题。剩余的下边距可以使块与后面的任何元素保持一定距离。 */
+	padding-right: 15px;
+	padding-left: 15px; /* 向块内的元素侧边（而不是块元素自身）添加填充可避免使用任何方框模型数学。此外，也可将具有侧边填充的嵌套块用作替代方法。 */
+}
+a img { /* 此选择器将删除某些浏览器中显示在图像周围的默认蓝色边框（当该图像包含在链接中时） */
+	border: none;
+}
+/* ~~ 站点链接的样式必须保持此顺序，包括用于创建悬停效果的选择器组在内。 ~~ */
+a:link {
+	color: #42413C;
+/* 	text-decoration: underline; 除非将链接设置成极为独特的外观样式，否则最好提供下划线，以便可从视觉上快速识别 */
+}
+a:visited {
+	color: #6E6C64;
+	text-decoration: underline;
+}
+a:hover, a:active, a:focus { /* 此组选择器将为键盘导航者提供与鼠标使用者相同的悬停体验。 */
+	text-decoration: none;
+}
+hr {
+  -moz-border-bottom-colors: none;
+  -moz-border-image: none;
+  -moz-border-left-colors: none;
+  -moz-border-right-colors: none;
+  -moz-border-top-colors: none;
+  border-style: solid none;
+  border-width: 1px 0;
+  margin: 18px 0;
+}
+
+
+.container {
+	margin: 0 auto; /* 侧边的自动值与宽度结合使用，可以将布局居中对齐 */
+}
+.container {
+	background-image: url("../images/body_bg.png?id=1332479173812");
+	background-position: center 0;
+	background-repeat: no-repeat;
+}
+/* ~~ 标题未指定宽度。它将扩展到布局的完整宽度。 ~~ */
+
+/* ~~ 以下是此布局的列。 ~~ 
+
+1) 填充仅放置在块元素的顶部和/或底部。这些块中的元素侧边具有填充。这样，您就可以避免使用任何“方框模型数学”。请记住，如果向块自身添加任何侧边填充或边框，这些侧边填充或边框将与您定义的宽度相加以得出 *总计* 宽度。您也可以选择删除块元素中的元素填充，并在该元素中另外放置一个没有任何宽度但具有设计所需填充的块元素。
+
+2) 由于这些列均为浮动列，因此未对其指定边距。如果必须添加边距，请避免在浮动方向一侧放置边距（例如，将块中的右边距设置为向右浮动）。在很多情况下，可以改用填充。对于必须破例的块，应向该块元素的规则中添加“display:inline”声明，以控制某些版本的 Internet Explorer 使边距翻倍的错误。
+
+3) 由于可以在一个文档中多次使用类（并且一个元素也可以应用多个类），因此已为这些列分配类名，而不是 ID。例如，如有必要，可以堆叠两个侧栏块。您可以根据个人偏好将这些名称轻松改为 ID，前提是仅对每个文档使用一次。
+
+4) 如果您更喜欢在左侧（而不是右侧）进行导航，只需使这些列向相反方向浮动（全部向左，而非全部向右），它们将按相反顺序显示。您无需在 HTML 源文件中移动块。
+
+*/
+.sidebar1 {
+	float: left;
+	width: 180px;
+	padding: 20px 0 0;
+	overflow: hidden;
+}
+.content {
+	padding: 10px 0;
+	width: 600px;
+	margin-left:200px;
+/* 	float: left; */
+}
+aside {
+	float: left;
+	width: 180px;
+	/* background: #EADCAE; */
+	padding: 10px 0;
+}
+
+/* ~~ 此分组的选择器为 .content 区域中的列表提供了空间 ~~ */
+.content ul, .content ol {
+	padding: 0 15px 15px 40px; /* 此填充反映上述标题和段落规则中的右填充。填充放置于下方可用于间隔列表中其它元素，置于左侧可用于创建缩进。您可以根据需要进行调整。 */
+}
+
+/* ~~ 导航列表样式（如果选择使用预先创建的 Spry 等弹出菜单，则可以删除此样式） ~~ */
+nav ul {
+	list-style: none; /* 这将删除列表标记 */
+	border-top: 1px solid #666; /* 这将为链接创建上边框 – 使用下边框将所有其它项放置在 LI 中 */
+	margin-bottom: 15px; /* 这将在下面内容的导航之间创建间距 */
+}
+nav ul li {
+	border-bottom: 1px solid #666; /* 这将创建按钮间隔 */
+}
+nav ul a, nav ul a:visited { /* 对这些选择器进行分组可确保链接即使在访问之后也能保持其按钮外观 */
+	padding: 5px 5px 5px 15px;
+	display: block; /* 这将为链接赋予块属性，使其填满包含它的整个 LI。这样，整个区域都可以响应鼠标单击操作。 */
+	width: 160px;  /*此宽度使整个按钮在 IE6 中可单击。如果您不需要支持 IE6，可以删除它。请用侧栏容器的宽度减去此链接的填充来计算正确的宽度。 */
+	text-decoration: none;
+	background: #C6D580;
+}
+nav ul a:hover, nav ul a:active, nav ul a:focus { /* 这将更改鼠标和键盘导航的背景和文本颜色 */
+	background: #ADB96E;
+	color: #FFF;
+}
+
+/* ~~ 脚注 ~~ */
+footer {
+	padding: 10px 0;
+	background: #CCC49F;
+	position: relative;/* 这可以使 IE6 hasLayout 以正确方式进行清除 */
+	clear: both; /* 此清除属性强制 .container 了解列的结束位置以及包含列的位置 */
+}
+footer p {
+	text-align: center;
+}
+/* ~~ 其它浮动/清除类 ~~ */
+.fltrt {  /* 此类可用于在页面中使元素向右浮动。浮动元素必须位于页面上的相邻元素前面。 */
+	float: right;
+	margin-left: 8px;
+}
+.fltlft { /* 此类可用于在页面中使元素向左浮动。浮动元素必须位于页面上的相邻元素前面。 */
+	float: left;
+	margin-right: 8px;
+}
+.clearfloat { /* 如果从 .container 中删除或移出了脚注，则可以将此类放置在 <br /> 或空块元素中，作为 .container 内最后一个浮动块之后的最终元素 */
+	clear:both;
+	height:0;
+	font-size: 1px;
+	line-height: 0px;
+}
+
+/*HTML 5 支持 - 将新 HTML 5 标签设置为 display:block，以使浏览器知道如何正确呈现标签。 */
+header, section, footer, aside, nav, article, figure {
+	display: block;
+}
+
+/* 导航栏 */
+.nav {
+  	list-style: none outside none;
+  	margin-bottom: 18px;
+  	margin-left: 0;
+}
+.nav > li > a {
+  display: block;
+}
+header {
+	background: #ADB96E;
+	color: #999999;
+}
+header {
+  background-color: #2C2C2C;
+  background-image: -moz-linear-gradient(center top , #256d76, #195776);
+  background-repeat: repeat-x;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25), 0 -1px 0 rgba(0, 0, 0, 0.1) inset;
+  min-height: 40px;
+  
+}
+header {
+  border-radius: 0 0 0 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+.container-fluid:after {
+  clear: both;
+}
+.container-fluid:before, .container-fluid:after {
+  content: "";
+  display: table;
+}
+.container-fluid {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+header .brand {
+  color: #999999;
+  display: block;
+  float: left;
+  font-size: 20px;
+  font-weight: 200;
+  line-height: 1;
+  margin-left: -20px;
+  padding: 8px 20px 12px;
+}
+
+header .nav-right {
+	float: right;
+	position: relative;
+	margin: 0;
+  	padding: 0;
+}
+header .nav {
+  	display: block;
+  	float: left;
+  	left: 0;
+ 	margin: 0 10px 0 0;
+ 	position: relative;
+}
+
+header .nav > li {
+  display: block;
+  float: left;
+  padding: 0 0 0 2px;
+}
+li {
+  line-height: 18px;
+}
+header .nav .active > a {
+  background-color: #134860;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+header .nav > li > a {
+  float: none;
+  line-height: 18px;
+  padding: 9px 10px 11px;
+  color:#FFFFFF;
+/*   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.75); */
+}
+
+.ic_arr {
+	display: inline-block;
+	height: 3px;
+	margin: -2px 0 0 3px;
+	overflow: hidden;
+	vertical-align: middle;
+	width: 5px;
+}
+
+.ic_arr em {
+  background: none repeat scroll 0 0 #C1C1C1;
+  display: block;
+  height: 1px;
+  overflow: hidden;
+}
+.ic_arr em.b2 {
+  margin: 0 1px;
+}
+.ic_arr em.b3 {
+  margin: 0 2px;
+  width: 1px;
+}
+
+.caret {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  vertical-align: top;
+  border-top: 4px solid #000000;
+  border-right: 4px solid transparent;
+  border-left: 4px solid transparent;
+  content: "";
+  opacity: 0.9;
+  filter: alpha(opacity=90);
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown .caret {
+	border-bottom-color: #C1C1C1;
+	border-top-color: #C1C1C1;
+	margin-top: 8px;
+	margin-left: 2px;
+}
+.dropdown > a:hover .caret {
+	border-bottom-color: #595959;
+	border-top-color: #595959;
+}
+
+.dropdown-menu {
+  background-clip: padding-box;
+/*   background-color: #FFFFFF; */
+  background: url("../images/layer_bg.png") repeat scroll 0 0 transparent;
+  border: 1px solid #797979;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+  border-radius: 0 0 3px 3px;
+  display:none;
+  float: left;
+  left: 0;
+  list-style: none outside none;
+  margin: 0 0 0 2px;
+  min-width: 160px;
+  padding: 3px 4px 4px;
+  position: absolute;
+  top: 100%;
+  z-index: 1000;
+  
+}
+.dropdown-menu li {
+	vertical-align: middle;
+	position: static;
+	float: none;
+}
+.dropdown-menu .divider {
+  background-color: #E5E5E5;
+  border-bottom: 1px solid #FFFFFF;
+  height: 1px;
+  margin: 2px 0px;
+  overflow: hidden;
+}
+.dropdown-menu a {
+  clear: both;
+  color: #333333;
+  display: block;
+  font-weight: normal;
+  line-height: 18px;
+  padding: 7px 10px;
+  white-space: nowrap;
+}
+.dropdown-menu i {
+	margin-right: 5px;
+	vertical-align: middle;
+}
+.open{
+}
+/* .dropdown-toggle { */
+  
+/* } */
+/* .open .dropdown-toggle{ */
+/* 	background-color: #999999; */
+/* 	border-color: #999999; */
+/* 	color: #FFFFFF; */
+/* } */
+/* .dropdown-toggle:active, .open .dropdown-toggle { */
+/*   outline: 0 none; */
+/* } */
+
+.open .dropdown-menu {
+  display: block;
+}
+
+.nav-pills:after {
+  clear: both;
+}
+.nav-pills:before, .nav-pills:after {
+  content: "";
+  display: table;
+}
+.nav-pills {
+  
+}
+.nav-pills > li > a {
+  border-radius: 3px 3px 3px 3px;
+}
+
+.nav li.dropdown.open .caret, .nav li.dropdown.open.active .caret, .nav li.dropdown.open a:hover .caret {
+  border-bottom-color: #FFFFFF;
+  border-top-color: #FFFFFF;
+  opacity: 1;
+}
+
+.nav-pills > li:hover > a{
+	-moz-border-bottom-colors: none;
+	-moz-border-image: none;
+	-moz-border-left-colors: none;
+	-moz-border-right-colors: none;
+	-moz-border-top-colors: none;
+	background:none repeat scroll 0 0 #FFFFFF;
+	border-color: #000000 #000000 -moz-use-text-color;
+	border-radius:3px 3px 0 0;
+	border-style:solid solid none;
+	border-width:1px 1px 0;
+	box-shadow:1px -2px 3px rgpa(0,0,0,0.3);
+	color:#595959;
+	margin: 2px 0 0;
+	padding: 6px 9px 11px;
+	position:relative;
+	z-index: 9999;
+	cursor: pointer;
+}
+.nav-pills li:hover .dropdown-menu{
+	display:block;
+}
+.dropdown-menu li > a:hover{
+	background-color: #0088CC;
+	color: #FFFFFF;
+	cursor: pointer;
+}
+.anchor-right{
+	left:auto;
+	right:0;
+}
+
+.left_nav{
+	padding-top: 20px;background: #EADCAE;
+}
+.left_nav .border {
+  background-image: url("../images/left_nav_border.gif");
+  background-position: center bottom;
+  background-repeat: no-repeat;
+}
+.left_nav .border {
+  margin: 0 0 12px;
+  padding: 0 0 15px;
+}
+.left_nav dt.current {
+	background-color: #3E81B0;
+	background-image: none !important;
+}
+.left_nav dt.current a.title, .left_nav dt.current a.son_title {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+.left_nav dt a.title img, .left_nav dt .title img {
+  margin: 0 4px 0 0;
+  vertical-align: text-top;
+}
+.left_nav dt .title {
+  display: block;
+  font-size: 14px;	
+  font-weight: normal;
+  height: 16px;
+  line-height: 16px;
+  margin: 0 0 1px;
+  overflow: hidden;
+  padding: 5px 15px;
+  white-space: nowrap;
+}
+.left_nav div dd a.title {
+  font-size: 12px;
+  font-weight: normal;
+  line-height: normal;
+  padding: 6px 15px 6px 33px;
+  text-indent: 2px;
+}
+.left_nav dt a.son_title, .left_nav div dd a {
+  display: block;
+  height: 14px;
+  margin: 0 0 1px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.left_nav dt a.title:hover, .left_nav dt a.son_title:hover, .left_nav dd a.title:hover, .left_nav dd.current, .declist .W_moredown, .declist .W_moreup, .W_main_narrow .W_main_r .tipsinvite {
+  background-image: url("../images/left_nav_hover.png");
+  background-position: left 0;
+  background-repeat: repeat;
+}

@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context" xmlns:jdbc="http://www.springframework.org/schema/jdbc"
+	xmlns:jee="http://www.springframework.org/schema/jee" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:jpa="http://www.springframework.org/schema/data/jpa"
+	xmlns:cache="http://www.springframework.org/schema/cache"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+		http://www.springframework.org/schema/jdbc http://www.springframework.org/schema/jdbc/spring-jdbc.xsd
+		http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd
+		http://www.springframework.org/schema/data/jpa http://www.springframework.org/schema/data/jpa/spring-jpa.xsd
+		http://www.springframework.org/schema/cache http://www.springframework.org/schema/cache/spring-cache.xsd"
+	default-lazy-init="true">
+
+	<description>Spring公共配置 </description>
+
+	<!-- enable autowire -->
+	<context:annotation-config />
+
+	<!-- 使用annotation 自动注册bean, 并保证@Required、@Autowired的属性被注入 -->
+	<context:component-scan base-package="com.hele">
+		<context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
+	</context:component-scan>
+	<!-- velocity配置 -->
+	<!-- <bean id="viewResolver" class="org.springframework.web.servlet.view.velocity.VelocityViewResolver">
+		<property name="viewClass" value="org.springframework.web.servlet.view.velocity.VelocityView" ></property>
+		<property name="prefix" value="/WEB-INF/velocity" ></property>
+		<property name="suffix" value=".vm" ></property>
+		<property name="contentType" value="text/html; charset=utf-8" ></property>
+		<property name="exposeSpringMacroHelpers" value="true" ></property>
+		<property name="exposeSessionAttributes" value="true" ></property>
+		<property name="exposeRequestAttributes" value="true" ></property>
+		<property name="requestContextAttribute" value="rc" ></property>
+		<property name="velocityFormatterAttribute" value="format" ></property>
+		<property name="dateToolAttribute" value="date" ></property>
+		<property name="numberToolAttribute" value="number" ></property>
+	</bean> -->
+
+    <!-- 启用缓存注解功能，这个是必须的，否则注解不会生效，另外，该注解一定要声明在spring主配置文件中才会生效 -->
+	<cache:annotation-driven cache-manager="cacheManager"/>
+    <bean id="guavaCacheManager" class="org.springframework.cache.guava.GuavaCacheManager" />
+	<!-- spring自己的换管理器，这里定义了两个缓存位置名称 ，既注解中的value
+	<bean id="cacheManager" class="org.springframework.cache.support.SimpleCacheManager">
+		<property name="caches">
+			<set>
+				<bean
+					class="org.springframework.cache.concurrent.ConcurrentMapCacheFactoryBean"
+					p:name="default" />
+				<bean
+					class="org.springframework.cache.concurrent.ConcurrentMapCacheFactoryBean"
+					p:name="andCache" />
+			</set>
+		</property>
+	</bean> -->
+	<!-- java.lang.IllegalArgumentException: loadCaches must not return an empty Collection -->
+	<!-- cacheManager工厂类，指定ehcache.xml的位置 -->
+	<bean id="cacheManagerFactory" class="org.springframework.cache.ehcache.EhCacheManagerFactoryBean" p:configLocation="classpath:ehcache/ehcache.xml" />
+
+	<!-- 声明cacheManager -->
+	<bean id="cacheManager" class="org.springframework.cache.ehcache.EhCacheCacheManager" p:cacheManager-ref="cacheManagerFactory" />
+
+	<bean id="captchaProducer" class="com.google.code.kaptcha.impl.DefaultKaptcha">
+        <property name="config">
+            <bean class="com.google.code.kaptcha.util.Config">
+                <constructor-arg>
+                    <props>
+                        <prop key="kaptcha.border">no</prop>
+                        <prop key="kaptcha.border.color">105,179,90</prop>
+                        <prop key="kaptcha.textproducer.font.color">black</prop>
+                        <prop key="kaptcha.image.width">100</prop>
+                        <prop key="kaptcha.image.height">40</prop>
+                        <prop key="kaptcha.textproducer.font.size">40</prop>
+                        <prop key="kaptcha.textproducer.char.string">0123456789</prop>
+                        <prop key="kaptcha.textproducer.char.length">4</prop>
+                        <prop key="kaptcha.noise.impl">com.google.code.kaptcha.impl.NoNoise</prop>
+                    </props>
+                </constructor-arg>
+            </bean>
+        </property>
+    </bean>
+	<!-- We Use This for Bean Validation -->
+	<bean id="validator" class="org.springframework.validation.beanvalidation.LocalValidatorFactoryBean" />
+
+	<!-- Security Configuration / Apache Shiro -->
+	<import resource="spring-shiro.xml" />
+
+	<!-- transaction manager, use JtaTransactionManager for global tx -->
+	<bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+
+	<!-- 使用annotation定义事务 -->
+	<tx:annotation-driven transaction-manager="transactionManager" proxy-target-class="true" />
+
+	<!-- mybatis scan for mappers and let them be autowired-->
+	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+		<property name="basePackage" value="com.hele.wsis.dao" />
+		 <property name="annotationClass" value="com.hele.commons.mybatis.MybatisRepository"/>
+	</bean>
+
+	<!-- define the SqlSessionFactory, notice that configLocation is not needed when you use MapperScannerConfigurer-->
+	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<property name="mapperLocations" value="classpath:mybatis/*Mapper.xml" />
+		<property name="typeAliasesPackage" value="com.hele.wsis.entity" />
+	</bean>
+
+
+	<!-- local development环境 -->
+
+ 		<context:property-placeholder ignore-unresolvable="true"  location="classpath*:application.dev.properties" />
+		<bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource" init-method="init" destroy-method="close">
+			<property name="url" value="${jdbc.url}" />
+			<property name="username" value="${jdbc.username}" />
+			<property name="password" value="${jdbc.password}" />
+			<property name="driverClassName" value="${jdbc.driver}" />
+			<property name="filters" value="${druid.filters}" />
+
+			<property name="maxActive" value="${druid.maxActive}" />
+			<property name="initialSize" value="${druid.initialSize}" />
+			<property name="maxWait" value="${druid.maxWait}" />
+			<property name="minIdle" value="${druid.minIdle}" />
+
+			<property name="timeBetweenEvictionRunsMillis" value="${druid.timeBetweenEvictionRunsMillis}" />
+			<property name="minEvictableIdleTimeMillis" value="${druid.minEvictableIdleTimeMillis}" />
+
+			<property name="validationQuery" value="${druid.validationQuery}" />
+			<property name="testWhileIdle" value="${druid.testWhileIdle}" />
+			<property name="testOnBorrow" value="${druid.testOnBorrow}" />
+			<property name="testOnReturn" value="${druid.testOnReturn}" />
+			<property name="maxOpenPreparedStatements" value="${druid.maxOpenPreparedStatements}" />
+			<property name="removeAbandoned" value="${druid.removeAbandoned}" /> <!-- 打开removeAbandoned功能 -->
+		    <property name="removeAbandonedTimeout" value="${druid.removeAbandonedTimeout}" /> <!-- 1800秒，也就是30分钟 -->
+		    <property name="logAbandoned" value="${druid.logAbandoned}" /> <!-- 关闭abanded连接时输出错误日志 -->
+		</bean>
+
+	
+
+
+
+
+</beans>

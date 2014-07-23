@@ -1,0 +1,115 @@
+body {
+    font-size: 9pt;
+    color: #3D3D3D;
+    font-family: '微软雅黑',verdana;
+    margin: 0px;
+    padding: 0px;
+    background-repeat: repeat-y;
+    background-position: center;
+    text-align: left;
+}
+td, th {
+    display: table-cell;
+    vertical-align: inherit;
+}
+table {
+    display: table;
+    border-collapse: separate;
+    border-spacing: 2px;
+    border-color: gray;
+}
+p {
+    display: block;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+}
+td, p, span {
+    font-size: 9pt;
+    line-height: 24px;
+}
+div#main {
+    margin: 0px;
+    border-top: 2px solid #71a3ce;
+    background: -webkit-gradient(linear, 0 0, 0 bottom, from(rgba(235,244,251, 0.6)), to(rgba(255, 255, 255,1)));
+}
+div#main_1 {
+    border: 1px solid #B3D6F2;
+    margin: 50px auto 20px;
+    padding-top: 20px;
+    width: 938px;
+    background: white;
+}
+#title {
+    margin-left: 20px;
+    padding-left: 40px;
+    background: url("../images/pub-1.png") no-repeat;
+    font-size: 15px;
+    padding-top: 10px;
+    overflow: hidden;
+}
+#title p {
+    border-bottom: 1px solid #ddd;
+    font-size: 16px;
+}
+.head {
+    font-weight: bold;
+    margin: 0;
+}
+.errmsg {
+    padding: 3px;
+    border: 1px solid #ececec;
+    display: none;
+    color: #47678C;
+    text-indent: 22px;
+    background: url('../images/msg_error.png') no-repeat 5px 5px;
+}
+.okmsg {
+    padding: 3px;
+    border: 1px solid #ececec;
+    display: none;
+    color: #47678C;
+    text-indent: 22px;
+    background: url('../images/msg_success.png') no-repeat 5px 5px;
+}
+.text table {
+    margin: 0 auto;
+}
+.tabinfo {
+    background-color: #f4fafe;
+    height: 28px;
+    line-height: 28px;
+    padding-left: 20px;
+}
+.text tr td {
+    padding: 5px;
+}
+td.name {
+    font-weight: normal;
+    line-height: 28px;
+    text-align: right;
+    width: 100px;
+    vertical-align: top;
+}
+
+.div-shadow {
+    background: none repeat scroll 0 0 #f2f3f3;
+    border-radius: 3px;
+    overflow: hidden;
+    float: left;
+}
+.req {
+    color: red;
+    font-size: 16px;
+}
+.fail .inputbox {
+    border-color: #425b86;
+}
+.ok .inputbox {
+    border-color: #9BCD38;
+}
+.inputbox{border: 1px solid #acbdd2;border-radius: 3px;height: 20px;font-size: 13px;line-height: 20px; width: 150px;}
+.inputbox-over{border: 1px solid #425b86;border-radius: 3px;height: 20px;font-size: 13px;line-height: 20px;width: 150px;}
+.inputbox{height: 28px;width: 250px;border-color: #ddd;}
+.inputbox-over{height: 28px; width: 250px;}

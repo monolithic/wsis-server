@@ -1,0 +1,194 @@
+/* CSS Document */
+*{ margin:0;}
+body{ font-size:12px; font-family:"宋体";}
+html{ height:100%}
+a{ font-family:"宋体"; text-decoration:none;}
+.loginbody{ background:url(../images/bgbody.jpg) left center; height:100%}
+.login_main{ width:1002px; height:566px;position: absolute; left:50%; top:50%; margin-left:-501px;margin-top:-283px;}
+
+.logink01{ padding:218px 201px 0 558px;_padding:216px 201px 0 558px; color:#fff;}
+.logink01 p{ margin-bottom:10px; height:21px;padding-left:10px;}
+.logink01 .input01{ height:21px; border:0; background-color:#6f9df2; width:154px; line-height:21px; font-size:14px; padding-left:10px;}
+.logink01 .input02{height:21px; border:1px solid #CDCDCD; background-color:#6f9df2;width:40px; line-height:21px; font-size:14px; padding-left:5px;}
+.logink01 span{ color:#FF3300;}
+.logink01 img {height:24px;width:50px;vertical-align: bottom;cursor:pointer;}
+.logink01 .inputbtn01{height:21px; border:0; background-color:#6f9df2; line-height:21px; font-size:14px; padding-left:5px; background: url(../images/login_btn01.gif) center center; width:53px; height:21px; cursor:pointer;margin-left:5px; }
+.logink01 a{ color:#fff; text-decoration:none; padding-left:10px;}
+.logink02 { width:598px; overflow:hidden; margin:18px auto 0; height:41px; padding-left:6px;}
+.logink02 a{ display:block; background:url(../images/btnl02.gif) left top no-repeat; width:84px; height:25px; float:left; text-align:center; color:#1b4e9e; line-height:25px; font-size:14px; font-weight:bold; margin-right:8px; padding:0 6px 5px 0;}
+.logink03 { width:435px; overflow:hidden; margin:0 auto; height:39px; padding:90px 0 0 33px;}
+.logink03 a{ display:block; background:url(../images/btnl01.gif) left top no-repeat; width:109px; height:33px; float:left; text-align:center; color:#b1030d; line-height:33px; font-size:16px; font-weight:bold; margin-right:33px; padding:0 3px 6px 0;}
+.help01{ text-align:center;}
+.lfont{ color:#fff; line-height:22px; height:22px; text-align:center;}
+
+.dhmain {
+    background: url("../images/dhmain.jpg") no-repeat scroll left top transparent;
+    height: 645px;
+    left: 50%;
+    margin-left: -501px;
+    margin-top: -361px;
+    position: absolute;
+    top: 50%;
+    width: 1002px;
+}
+.dhnav {
+    height: 77px;
+    overflow: hidden;
+    padding: 457px 0 0 236px;
+}
+.dhnavc {
+    padding: 457px 0 0 290px;
+}
+.dhnav a {
+    display: block;
+    float: left;
+    height: 68px;
+    margin-right: 28px;
+    padding: 0 8px 9px 0;
+    width: 78px;
+}
+.dhnav a.dhnav01 {
+    background: url("../images/dhbtn01.jpg") no-repeat scroll left top transparent;
+}
+.dhnavc a.dhnav01 {
+    background: url("../images/dhbtnc01.jpg") no-repeat scroll left top transparent;
+}
+.dhnav a.dhnav02 {
+    background: url("../images/dhbtn02.jpg") no-repeat scroll left top transparent;
+}
+.dhnav a.dhnav03 {
+    background: url("../images/dhbtn03.jpg") no-repeat scroll left top transparent;
+}
+.dhnav a.dhnav04 {
+    background: url("../images/dhbtn04.jpg") no-repeat scroll left top transparent;
+}
+.dhnav a.dhnav05 {
+    background: url("../images/dhbtn05.jpg") no-repeat scroll left top transparent;
+}
+.dhnav a.dhnav052 {
+    background: url("../images/dhbtn052.jpg") no-repeat scroll left top transparent;
+}
+.dhnav a.dhnav16 {
+    background: url("../images/dhbtn16.jpg") no-repeat scroll left top transparent;
+}
+.dhnav a.dhnav01:hover {
+    background: url("../images/dhbtnb01.jpg") no-repeat scroll left top transparent;
+}
+.dhnavc a.dhnav01:hover {
+    background: url("../images/dhbtncb01.jpg") no-repeat scroll left top transparent;
+}
+.dhnav a.dhnav02:hover {
+    background: url("../images/dhbtnb02.jpg") no-repeat scroll left top transparent;
+}
+.dhnav a.dhnav03:hover {
+    background: url("../images/dhbtnb03.jpg") no-repeat scroll left top transparent;
+}
+.dhnav a.dhnav052:hover {
+    background: url("../images/dhbtnb0521.jpg") no-repeat scroll left top transparent;
+}
+.dhnav a.dhnav04:hover {
+    background: url("../images/dhbtnb04.jpg") no-repeat scroll left top transparent;
+}
+.dhnav a.dhnav05:hover {
+    background: url("../images/dhbtnb05.jpg") no-repeat scroll left top transparent;
+}
+.dhnav a.dhnav16:hover {
+    background: url("../images/dhbtnb16.jpg") no-repeat scroll left top transparent;
+}
+.dhnavb {
+    clear: both;
+    padding: 28px 0 0 154px;
+}
+.dhnavb a {
+    display: block;
+    float: left;
+    height: 50px;
+    margin-right: 7px;
+    padding: 0 6px 4px 0;
+    width: 58px;
+}
+.dhnavb a.dhnav06 {
+    background: url("../images/dhbtn06.jpg") no-repeat scroll left top transparent;
+}
+.dhnavb a.dhnav07 {
+    background: url("../images/dhbtn07.jpg") no-repeat scroll left top transparent;
+}
+.dhnavb a.dhnav08 {
+    background: url("../images/dhbtn08.jpg") no-repeat scroll left top transparent;
+}
+.dhnavb a.dhnav09 {
+    background: url("../images/dhbtn09.jpg") no-repeat scroll left top transparent;
+}
+.dhnavb a.dhnav10 {
+    background: url("../images/dhbtn10.jpg") no-repeat scroll left top transparent;
+}
+.dhnavb a.dhnav11 {
+    background: url("../images/dhbtn11.jpg") no-repeat scroll left top transparent;
+}
+.dhnavb a.dhnav12 {
+    background: url("../images/dhbtn12.jpg") no-repeat scroll left top transparent;
+}
+.dhnavb a.dhnav13 {
+    background: url("../images/dhbtn13.jpg") no-repeat scroll left top transparent;
+}
+.dhnavb a.dhnav14 {
+    background: url("../images/dhbtn14.jpg") no-repeat scroll left top transparent;
+}
+.dhnavb a.dhnav15 {
+    background: url("../images/dhbtn15.jpg") no-repeat scroll left top transparent;
+}
+.dhnavb a.dhnav06:hover {
+    background: url("../images/dhbtnb06.jpg") no-repeat scroll left top transparent;
+}
+.dhnavb a.dhnav07:hover {
+    background: url("../images/dhbtnb07.jpg") no-repeat scroll left top transparent;
+}
+.dhnavb a.dhnav08:hover {
+    background: url("../images/dhbtnb08.jpg") no-repeat scroll left top transparent;
+}
+.dhnavb a.dhnav09:hover {
+    background: url("../images/dhbtnb09.jpg") no-repeat scroll left top transparent;
+}
+.dhnavb a.dhnav10:hover {
+    background: url("../images/dhbtnb10.jpg") no-repeat scroll left top transparent;
+}
+.dhnavb a.dhnav11:hover {
+    background: url("../images/dhbtnb11.jpg") no-repeat scroll left top transparent;
+}
+.dhnavb a.dhnav12:hover {
+    background: url("../images/dhbtnb12.jpg") no-repeat scroll left top transparent;
+}
+.dhnavb a.dhnav13:hover {
+    background: url("../images/dhbtnb13.jpg") no-repeat scroll left top transparent;
+}
+.dhnavb a.dhnav14:hover {
+    background: url("../images/dhbtnb14.jpg") no-repeat scroll left top transparent;
+}
+.dhnavb a.dhnav15:hover {
+    background: url("../images/dhbtnb15.jpg") no-repeat scroll left top transparent;
+}
+.dhnavb2 {
+    clear: both;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 10px 0 0 100px;
+    text-align: center;
+}
+.dhnavb2 a {
+    background: url("../images/login_btna.gif") no-repeat scroll left top transparent;
+    color: #0F4180;
+    display: block;
+    float: left;
+    height: 41px;
+    line-height: 41px;
+    margin-right: 7px;
+    width: 127px;
+	
+}
+.dhnavb2 a:hover {
+    background: url("../images/login_btnb.gif") no-repeat scroll left top transparent;
+}
+
+.dhnavb2 a.selected {
+    background: url("../images/login_btnb.gif") no-repeat scroll left top transparent;
+}

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hele.wsis.dao.UserMapper">
+
+
+    <select id="getUserByUsername" parameterType="string" resultType="UserInfo">
+        SELECT * from WSIS_USER_INFO a where a.email =#{value} or a.mobile = #{value}
+        or exists (select 1 from ent_detail b where a.gid=b.gid and (b.regno = #{value} or b.entname = #{value}))
+        or exists (select 1 from pers_detail c where a.gid=c.gid and (c.certcode = #{value} or c.realname = #{value}))
+    </select>
+
+    <delete id="deleteToken" parameterType="UserToken" >
+        delete from wsis_user_token where gid=#{gid}
+    </delete>
+    <insert id="saveToken" parameterType="UserToken">
+        insert into wsis_user_token(gid,token,createtime,status)
+        values(#{gid},#{token},sysdate,#{status})
+    </insert>
+
+    <select id="getUserById"  parameterType="string" resultType="UserInfo">
+        select * from wsis_user_info where gid=#{value}
+    </select>
+
+    <select id="getUserTokenById" parameterType="string" resultType="UserToken">
+        select * from wsis_user_token where gid=#{value}
+    </select>
+
+    <insert id="insertUserInfo" parameterType="map">
+        insert into wsis_user_info(gid,gnumb,email,mobile,nickname,regtime,status,usertype,password)
+        values(#{gid},'',#{email},#{mobile},#{nickname},sysdate,#{status},#{usertype},#{password})
+    </insert>
+
+    <insert id="insertPersDetail" parameterType="map">
+        insert into pers_detail(gid,certcode,realname)
+        values(#{gid},#{idCard},#{realName})
+    </insert>
+
+    <select id="getPersDetailById" parameterType="string" resultType="PersDetail">
+        select * from pers_detail where gid=#{value}
+    </select>
+</mapper>

@@ -1,0 +1,26 @@
+.grid-title{
+	font-size: 26px;
+	text-align: center;
+}
+
+.ui-jqgrid .ui-jqgrid-view {
+	font-size:13px;
+}
+
+.ui-jqgrid a {
+	text-decoration: underline;
+	color: #0055A1;
+}
+
+.ui-jqgrid a:hover {
+	color: #FF6600;
+	background:none;
+}
+.ui-jqgrid tr.jqgrow td { height: auto; white-space: normal; }
+
+.ui-jqgrid tr.jqgrow td {
+	padding: 4px 0 4px 2px;
+}
+.ui-jqgrid .ui-jqgrid-sortable {
+	font-weight: bolder;
+}

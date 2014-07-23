@@ -1,0 +1,298 @@
+七月 03, 2014 1:02:00 下午 org.apache.catalina.core.StandardServer await
+信息: A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+七月 03, 2014 1:02:00 下午 org.apache.coyote.AbstractProtocol pause
+信息: Pausing ProtocolHandler ["http-bio-8081"]
+七月 03, 2014 1:02:00 下午 org.apache.coyote.AbstractProtocol pause
+信息: Pausing ProtocolHandler ["ajp-bio-8009"]
+七月 03, 2014 1:02:00 下午 org.apache.catalina.core.StandardService stopInternal
+信息: Stopping service Catalina
+七月 03, 2014 1:02:02 下午 org.apache.catalina.loader.WebappClassLoader clearReferencesThreads
+严重: The web application [/hz6] appears to have started a thread named [MySQL Statement Cancellation Timer] but has failed to stop it. This is very likely to create a memory leak.
+七月 03, 2014 1:02:02 下午 org.apache.catalina.loader.WebappClassLoader clearReferencesThreads
+严重: The web application [/hz6] appears to have started a thread named [Timer-1] but has failed to stop it. This is very likely to create a memory leak.
+七月 03, 2014 1:02:02 下午 org.apache.catalina.loader.WebappClassLoader checkThreadLocalMapForLeaks
+严重: The web application [/hz6] created a ThreadLocal with key of type [java.lang.ThreadLocal] (value [java.lang.ThreadLocal@1c417913]) and a value of type [com.horizon.permission.validate.ResValidateImpl] (value [com.horizon.permission.validate.ResValidateImpl@e73dce3]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+七月 03, 2014 1:02:02 下午 org.apache.catalina.loader.WebappClassLoader checkThreadLocalMapForLeaks
+严重: The web application [/hz6] created a ThreadLocal with key of type [java.lang.ThreadLocal] (value [java.lang.ThreadLocal@58aac27e]) and a value of type [com.horizon.context.DefaultContext] (value [com.horizon.context.DefaultContext@32c70bac]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+七月 03, 2014 1:02:02 下午 org.apache.catalina.loader.WebappClassLoader checkThreadLocalMapForLeaks
+严重: The web application [/hz6] created a ThreadLocal with key of type [java.lang.ThreadLocal] (value [java.lang.ThreadLocal@29cf633f]) and a value of type [com.horizon.authority.LoginAuthenticatorCommonImpl] (value [com.horizon.authority.LoginAuthenticatorCommonImpl@6e7cd28a]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+七月 03, 2014 1:02:02 下午 org.apache.catalina.loader.WebappClassLoader checkThreadLocalMapForLeaks
+严重: The web application [/hz6] created a ThreadLocal with key of type [java.lang.ThreadLocal] (value [java.lang.ThreadLocal@44e29ab1]) and a value of type [flex.messaging.client.FlexClient] (value [flex.messaging.client.FlexClient@7919fdcb]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+七月 03, 2014 1:02:02 下午 org.apache.catalina.loader.WebappClassLoader checkThreadLocalMapForLeaks
+严重: The web application [/hz6] created a ThreadLocal with key of type [java.lang.ThreadLocal] (value [java.lang.ThreadLocal@1965588a]) and a value of type [com.horizon.permission.validate.ResValidateImpl] (value [com.horizon.permission.validate.ResValidateImpl@4c97d90c]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+七月 03, 2014 1:02:02 下午 org.apache.catalina.loader.WebappClassLoader checkThreadLocalMapForLeaks
+严重: The web application [/hz6] created a ThreadLocal with key of type [java.lang.ThreadLocal] (value [java.lang.ThreadLocal@52aca1d]) and a value of type [com.horizon.permission.validate.DesignCreatorValidateImpl] (value [com.horizon.permission.validate.DesignCreatorValidateImpl@3c3b3891]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+七月 03, 2014 1:02:02 下午 org.apache.catalina.loader.WebappClassLoader checkThreadLocalMapForLeaks
+严重: The web application [/hz6] created a ThreadLocal with key of type [java.lang.ThreadLocal] (value [java.lang.ThreadLocal@53fed67b]) and a value of type [com.horizon.authority.authentication.AuthenticationImpl4AllRole] (value [com.horizon.authority.authentication.AuthenticationImpl4AllRole@7fb35051]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+七月 03, 2014 1:02:02 下午 org.apache.catalina.loader.WebappClassLoader checkThreadLocalMapForLeaks
+严重: The web application [/hz6] created a ThreadLocal with key of type [java.lang.ThreadLocal] (value [java.lang.ThreadLocal@44e29ab1]) and a value of type [flex.messaging.client.FlexClient] (value [flex.messaging.client.FlexClient@555e3756]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+七月 03, 2014 1:02:02 下午 org.apache.catalina.loader.WebappClassLoader checkThreadLocalMapForLeaks
+严重: The web application [/hz6] created a ThreadLocal with key of type [java.lang.ThreadLocal] (value [java.lang.ThreadLocal@1965588a]) and a value of type [com.horizon.permission.validate.ResValidateImpl] (value [com.horizon.permission.validate.ResValidateImpl@1c831ae3]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+七月 03, 2014 1:02:02 下午 org.apache.catalina.loader.WebappClassLoader checkThreadLocalMapForLeaks
+严重: The web application [/hz6] created a ThreadLocal with key of type [java.lang.ThreadLocal] (value [java.lang.ThreadLocal@58aac27e]) and a value of type [com.horizon.context.DefaultContext] (value [com.horizon.context.DefaultContext@635a3bb4]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+七月 03, 2014 1:02:02 下午 org.apache.catalina.loader.WebappClassLoader checkThreadLocalMapForLeaks
+严重: The web application [/hz6] created a ThreadLocal with key of type [java.lang.ThreadLocal] (value [java.lang.ThreadLocal@58aac27e]) and a value of type [com.horizon.context.DefaultContext] (value [com.horizon.context.DefaultContext@3905d961]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+七月 03, 2014 1:02:02 下午 org.apache.catalina.loader.WebappClassLoader checkThreadLocalMapForLeaks
+严重: The web application [/hz6] created a ThreadLocal with key of type [java.lang.ThreadLocal] (value [java.lang.ThreadLocal@44e29ab1]) and a value of type [flex.messaging.client.FlexClient] (value [flex.messaging.client.FlexClient@555e3756]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+七月 03, 2014 1:02:02 下午 org.apache.catalina.loader.WebappClassLoader checkThreadLocalMapForLeaks
+严重: The web application [/hz6] created a ThreadLocal with key of type [java.lang.ThreadLocal] (value [java.lang.ThreadLocal@44e29ab1]) and a value of type [flex.messaging.client.FlexClient] (value [flex.messaging.client.FlexClient@2f028c86]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+七月 03, 2014 1:02:02 下午 org.apache.catalina.loader.WebappClassLoader checkThreadLocalMapForLeaks
+严重: The web application [/hz6] created a ThreadLocal with key of type [java.lang.ThreadLocal] (value [java.lang.ThreadLocal@1c417913]) and a value of type [com.horizon.permission.validate.ResValidateImpl] (value [com.horizon.permission.validate.ResValidateImpl@5057c986]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+七月 03, 2014 1:02:02 下午 org.apache.catalina.loader.WebappClassLoader checkThreadLocalMapForLeaks
+严重: The web application [/hz6] created a ThreadLocal with key of type [java.lang.ThreadLocal] (value [java.lang.ThreadLocal@44e29ab1]) and a value of type [flex.messaging.client.FlexClient] (value [flex.messaging.client.FlexClient@2f028c86]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+七月 03, 2014 1:02:02 下午 org.apache.catalina.loader.WebappClassLoader checkThreadLocalMapForLeaks
+严重: The web application [/hz6] created a ThreadLocal with key of type [java.lang.ThreadLocal] (value [java.lang.ThreadLocal@1965588a]) and a value of type [com.horizon.permission.validate.ResValidateImpl] (value [com.horizon.permission.validate.ResValidateImpl@336fa59f]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+七月 03, 2014 1:02:02 下午 org.apache.catalina.loader.WebappClassLoader checkThreadLocalMapForLeaks
+严重: The web application [/hz6] created a ThreadLocal with key of type [java.lang.ThreadLocal] (value [java.lang.ThreadLocal@58aac27e]) and a value of type [com.horizon.context.DefaultContext] (value [com.horizon.context.DefaultContext@66e2841a]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+七月 03, 2014 1:02:03 下午 org.apache.coyote.AbstractProtocol stop
+信息: Stopping ProtocolHandler ["http-bio-8081"]
+七月 03, 2014 1:02:03 下午 org.apache.coyote.AbstractProtocol stop
+信息: Stopping ProtocolHandler ["ajp-bio-8009"]
+七月 03, 2014 1:02:03 下午 org.apache.coyote.AbstractProtocol destroy
+信息: Destroying ProtocolHandler ["http-bio-8081"]
+七月 03, 2014 1:02:03 下午 org.apache.coyote.AbstractProtocol destroy
+信息: Destroying ProtocolHandler ["ajp-bio-8009"]
+七月 03, 2014 1:02:13 下午 org.apache.catalina.core.AprLifecycleListener init
+信息: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: /opt/dmdbms/bin::/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib
+七月 03, 2014 1:02:14 下午 org.apache.coyote.AbstractProtocol init
+信息: Initializing ProtocolHandler ["http-bio-8081"]
+七月 03, 2014 1:02:14 下午 org.apache.coyote.AbstractProtocol init
+信息: Initializing ProtocolHandler ["ajp-bio-8009"]
+七月 03, 2014 1:02:14 下午 org.apache.catalina.startup.Catalina load
+信息: Initialization processed in 1871 ms
+七月 03, 2014 1:02:14 下午 org.apache.catalina.core.StandardService startInternal
+信息: Starting service Catalina
+七月 03, 2014 1:02:14 下午 org.apache.catalina.core.StandardEngine startInternal
+信息: Starting Servlet Engine: Apache Tomcat/7.0.53
+七月 03, 2014 1:02:14 下午 org.apache.catalina.startup.HostConfig deployDescriptor
+信息: Deploying configuration descriptor /opt/apache-tomcat-7.0.53/conf/Catalina/localhost/hz6.xml
+七月 03, 2014 1:02:14 下午 org.apache.catalina.startup.SetContextPropertiesRule begin
+警告: [SetContextPropertiesRule]{Context} Setting property 'debug' to '0' did not find a matching property.
+七月 03, 2014 1:02:14 下午 org.apache.catalina.loader.WebappClassLoader validateJarFile
+信息: validateJarFile(/home/webapp/hz6/WEB-INF/lib/servlet-api-2.3.jar) - jar not loaded. See Servlet Spec 3.0, section 10.7.2. Offending class: javax/servlet/Servlet.class
+七月 03, 2014 1:02:36 下午 org.apache.catalina.startup.HostConfig deployDirectory
+信息: Deploying web application directory /opt/apache-tomcat-7.0.53/webapps/manager
+七月 03, 2014 1:02:37 下午 org.apache.catalina.startup.HostConfig deployDirectory
+信息: Deploying web application directory /opt/apache-tomcat-7.0.53/webapps/host-manager
+七月 03, 2014 1:02:37 下午 org.apache.catalina.startup.HostConfig deployDirectory
+信息: Deploying web application directory /opt/apache-tomcat-7.0.53/webapps/ROOT
+七月 03, 2014 1:02:38 下午 org.apache.catalina.startup.HostConfig deployDirectory
+信息: Deploying web application directory /opt/apache-tomcat-7.0.53/webapps/docs
+七月 03, 2014 1:02:38 下午 org.apache.catalina.startup.HostConfig deployDirectory
+信息: Deploying web application directory /opt/apache-tomcat-7.0.53/webapps/examples
+七月 03, 2014 1:02:39 下午 org.apache.coyote.AbstractProtocol start
+信息: Starting ProtocolHandler ["http-bio-8081"]
+七月 03, 2014 1:02:39 下午 org.apache.coyote.AbstractProtocol start
+信息: Starting ProtocolHandler ["ajp-bio-8009"]
+七月 03, 2014 1:02:39 下午 org.apache.catalina.startup.Catalina start
+信息: Server startup in 25026 ms
+七月 03, 2014 1:07:19 下午 org.apache.catalina.startup.HostConfig deployDescriptor
+信息: Deploying configuration descriptor /opt/apache-tomcat-7.0.53/conf/Catalina/localhost/qyxygs-server.xml
+七月 03, 2014 1:07:19 下午 org.apache.tomcat.util.digester.Digester fatalError
+严重: Parse Fatal Error at line 1 column 1: 文件提前结束。
+org.xml.sax.SAXParseException; lineNumber: 1; columnNumber: 1; 文件提前结束。
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:198)
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.fatalError(ErrorHandlerWrapper.java:177)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:441)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:368)
+	at com.sun.org.apache.xerces.internal.impl.XMLScanner.reportFatalError(XMLScanner.java:1436)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl$PrologDriver.next(XMLDocumentScannerImpl.java:1019)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:606)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:510)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:848)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:777)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1213)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:649)
+	at org.apache.tomcat.util.digester.Digester.parse(Digester.java:1580)
+	at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:624)
+	at org.apache.catalina.startup.HostConfig$DeployDescriptor.run(HostConfig.java:1839)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+
+七月 03, 2014 1:07:19 下午 org.apache.catalina.startup.HostConfig deployDescriptor
+严重: Error deploying configuration descriptor /opt/apache-tomcat-7.0.53/conf/Catalina/localhost/qyxygs-server.xml
+org.xml.sax.SAXParseException; lineNumber: 1; columnNumber: 1; 文件提前结束。
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1239)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:649)
+	at org.apache.tomcat.util.digester.Digester.parse(Digester.java:1580)
+	at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:624)
+	at org.apache.catalina.startup.HostConfig$DeployDescriptor.run(HostConfig.java:1839)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+
+七月 03, 2014 1:07:19 下午 org.apache.tomcat.util.digester.Digester fatalError
+严重: Parse Fatal Error at line 1 column 1: 文件提前结束。
+org.xml.sax.SAXParseException; systemId: file:/opt/apache-tomcat-7.0.53/conf/Catalina/localhost/qyxygs-server.xml; lineNumber: 1; columnNumber: 1; 文件提前结束。
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:198)
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.fatalError(ErrorHandlerWrapper.java:177)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:441)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:368)
+	at com.sun.org.apache.xerces.internal.impl.XMLScanner.reportFatalError(XMLScanner.java:1436)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl$PrologDriver.next(XMLDocumentScannerImpl.java:1019)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:606)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:510)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:848)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:777)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1213)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:649)
+	at org.apache.tomcat.util.digester.Digester.parse(Digester.java:1561)
+	at org.apache.catalina.startup.ContextConfig.processContextConfig(ContextConfig.java:634)
+	at org.apache.catalina.startup.ContextConfig.contextConfig(ContextConfig.java:596)
+	at org.apache.catalina.startup.ContextConfig.init(ContextConfig.java:834)
+	at org.apache.catalina.startup.ContextConfig.lifecycleEvent(ContextConfig.java:382)
+	at org.apache.catalina.util.LifecycleSupport.fireLifecycleEvent(LifecycleSupport.java:117)
+	at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:90)
+	at org.apache.catalina.util.LifecycleBase.setStateInternal(LifecycleBase.java:402)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:110)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:139)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:901)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:877)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:632)
+	at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:670)
+	at org.apache.catalina.startup.HostConfig$DeployDescriptor.run(HostConfig.java:1839)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+
+七月 03, 2014 1:07:19 下午 org.apache.catalina.startup.ContextConfig processContextConfig
+严重: Parse error in context.xml for /qyxygs-server
+org.xml.sax.SAXParseException; systemId: file:/opt/apache-tomcat-7.0.53/conf/Catalina/localhost/qyxygs-server.xml; lineNumber: 1; columnNumber: 1; 文件提前结束。
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:198)
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.fatalError(ErrorHandlerWrapper.java:177)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:441)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:368)
+	at com.sun.org.apache.xerces.internal.impl.XMLScanner.reportFatalError(XMLScanner.java:1436)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl$PrologDriver.next(XMLDocumentScannerImpl.java:1019)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:606)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:510)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:848)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:777)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1213)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:649)
+	at org.apache.tomcat.util.digester.Digester.parse(Digester.java:1561)
+	at org.apache.catalina.startup.ContextConfig.processContextConfig(ContextConfig.java:634)
+	at org.apache.catalina.startup.ContextConfig.contextConfig(ContextConfig.java:596)
+	at org.apache.catalina.startup.ContextConfig.init(ContextConfig.java:834)
+	at org.apache.catalina.startup.ContextConfig.lifecycleEvent(ContextConfig.java:382)
+	at org.apache.catalina.util.LifecycleSupport.fireLifecycleEvent(LifecycleSupport.java:117)
+	at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:90)
+	at org.apache.catalina.util.LifecycleBase.setStateInternal(LifecycleBase.java:402)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:110)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:139)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:901)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:877)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:632)
+	at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:670)
+	at org.apache.catalina.startup.HostConfig$DeployDescriptor.run(HostConfig.java:1839)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+
+七月 03, 2014 1:07:19 下午 org.apache.catalina.startup.ContextConfig processContextConfig
+严重: Occurred at line 1 column 1
+七月 03, 2014 1:07:19 下午 org.apache.catalina.core.ContainerBase addChildInternal
+严重: ContainerBase.addChild: start: 
+org.apache.catalina.LifecycleException: Failed to start component [/qyxygs-server]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:154)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:901)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:877)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:632)
+	at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:670)
+	at org.apache.catalina.startup.HostConfig$DeployDescriptor.run(HostConfig.java:1839)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.apache.catalina.LifecycleException: Failed to process either the global, per-host or context-specific context.xml file therefore the [/qyxygs-server] Context cannot be started.
+	at org.apache.catalina.startup.FailedContext.startInternal(FailedContext.java:158)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	... 10 more
+
+七月 03, 2014 1:07:19 下午 org.apache.catalina.startup.HostConfig deployDescriptor
+严重: Error deploying configuration descriptor /opt/apache-tomcat-7.0.53/conf/Catalina/localhost/qyxygs-server.xml
+java.lang.IllegalStateException: ContainerBase.addChild: start: org.apache.catalina.LifecycleException: Failed to start component [/qyxygs-server]
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:904)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:877)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:632)
+	at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:670)
+	at org.apache.catalina.startup.HostConfig$DeployDescriptor.run(HostConfig.java:1839)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+
+七月 03, 2014 1:08:29 下午 org.apache.catalina.core.StandardServer await
+信息: A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+七月 03, 2014 1:08:29 下午 org.apache.coyote.AbstractProtocol pause
+信息: Pausing ProtocolHandler ["http-bio-8081"]
+七月 03, 2014 1:08:29 下午 org.apache.coyote.AbstractProtocol pause
+信息: Pausing ProtocolHandler ["ajp-bio-8009"]
+七月 03, 2014 1:08:29 下午 org.apache.catalina.core.StandardService stopInternal
+信息: Stopping service Catalina
+七月 03, 2014 1:08:29 下午 org.apache.catalina.loader.WebappClassLoader clearReferencesThreads
+严重: The web application [/hz6] appears to have started a thread named [MySQL Statement Cancellation Timer] but has failed to stop it. This is very likely to create a memory leak.
+七月 03, 2014 1:08:29 下午 org.apache.catalina.loader.WebappClassLoader clearReferencesThreads
+严重: The web application [/hz6] appears to have started a thread named [Timer-1] but has failed to stop it. This is very likely to create a memory leak.
+七月 03, 2014 1:08:29 下午 org.apache.coyote.AbstractProtocol stop
+信息: Stopping ProtocolHandler ["http-bio-8081"]
+七月 03, 2014 1:08:29 下午 org.apache.coyote.AbstractProtocol stop
+信息: Stopping ProtocolHandler ["ajp-bio-8009"]
+七月 03, 2014 1:08:29 下午 org.apache.coyote.AbstractProtocol destroy
+信息: Destroying ProtocolHandler ["http-bio-8081"]
+七月 03, 2014 1:08:29 下午 org.apache.coyote.AbstractProtocol destroy
+信息: Destroying ProtocolHandler ["ajp-bio-8009"]
+七月 03, 2014 1:14:18 下午 org.apache.catalina.core.AprLifecycleListener init
+信息: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: /opt/dmdbms/bin::/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib
+七月 03, 2014 1:14:19 下午 org.apache.coyote.AbstractProtocol init
+信息: Initializing ProtocolHandler ["http-bio-8081"]
+七月 03, 2014 1:14:19 下午 org.apache.coyote.AbstractProtocol init
+信息: Initializing ProtocolHandler ["ajp-bio-8009"]
+七月 03, 2014 1:14:19 下午 org.apache.catalina.startup.Catalina load
+信息: Initialization processed in 1421 ms
+七月 03, 2014 1:14:19 下午 org.apache.catalina.core.StandardService startInternal
+信息: Starting service Catalina
+七月 03, 2014 1:14:19 下午 org.apache.catalina.core.StandardEngine startInternal
+信息: Starting Servlet Engine: Apache Tomcat/7.0.53
+七月 03, 2014 1:14:19 下午 org.apache.catalina.startup.HostConfig deployDescriptor
+信息: Deploying configuration descriptor /opt/apache-tomcat-7.0.53/conf/Catalina/localhost/qyxygs-server.xml
+七月 03, 2014 1:14:19 下午 org.apache.catalina.startup.SetContextPropertiesRule begin
+警告: [SetContextPropertiesRule]{Context} Setting property 'debug' to '0' did not find a matching property.
+Jul 03, 2014 1:14:41 PM org.apache.catalina.startup.HostConfig deployDescriptor
+信息: Deploying configuration descriptor /opt/apache-tomcat-7.0.53/conf/Catalina/localhost/hz6.xml
+Jul 03, 2014 1:14:41 PM org.apache.catalina.startup.SetContextPropertiesRule begin
+警告: [SetContextPropertiesRule]{Context} Setting property 'debug' to '0' did not find a matching property.
+Jul 03, 2014 1:14:42 PM org.apache.catalina.loader.WebappClassLoader validateJarFile
+信息: validateJarFile(/home/webapp/hz6/WEB-INF/lib/servlet-api-2.3.jar) - jar not loaded. See Servlet Spec 3.0, section 10.7.2. Offending class: javax/servlet/Servlet.class
+Jul 03, 2014 1:15:01 PM org.apache.catalina.startup.HostConfig deployDirectory
+信息: Deploying web application directory /opt/apache-tomcat-7.0.53/webapps/manager
+Jul 03, 2014 1:15:02 PM org.apache.catalina.startup.HostConfig deployDirectory
+信息: Deploying web application directory /opt/apache-tomcat-7.0.53/webapps/host-manager
+Jul 03, 2014 1:15:02 PM org.apache.catalina.startup.HostConfig deployDirectory
+信息: Deploying web application directory /opt/apache-tomcat-7.0.53/webapps/ROOT
+Jul 03, 2014 1:15:02 PM org.apache.catalina.startup.HostConfig deployDirectory
+信息: Deploying web application directory /opt/apache-tomcat-7.0.53/webapps/docs
+Jul 03, 2014 1:15:02 PM org.apache.catalina.startup.HostConfig deployDirectory
+信息: Deploying web application directory /opt/apache-tomcat-7.0.53/webapps/examples
+Jul 03, 2014 1:15:03 PM org.apache.coyote.AbstractProtocol start
+信息: Starting ProtocolHandler ["http-bio-8081"]
+Jul 03, 2014 1:15:03 PM org.apache.coyote.AbstractProtocol start
+信息: Starting ProtocolHandler ["ajp-bio-8009"]
+Jul 03, 2014 1:15:03 PM org.apache.catalina.startup.Catalina start
+信息: Server startup in 44068 ms
+Jul 03, 2014 1:19:06 PM org.apache.jasper.compiler.TldLocationsCache tldScanJar
+信息: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.

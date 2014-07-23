@@ -1,0 +1,174 @@
+@charset "utf-8";
+
+body {
+	line-height: 18px;
+}
+.navbar-fixed-top {
+	top: 0;
+}
+
+.navbar-fixed-top, .navbar-fixed-bottom {
+	left: 0;
+    margin-bottom: 0;
+    position: fixed;
+    right: 0;
+    z-index: 1030;
+}
+
+.navbar {
+    color: #999999;
+}
+
+.navbar {
+    margin-bottom: 18px;
+    overflow: visible;
+}
+
+.navbar-inner {
+    background-color: #2C2C2C;
+    background-image: -moz-linear-gradient(center top , #333333, #222222);
+    background-repeat: repeat-x;
+    border-radius: 4px 4px 4px 4px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25), 0 -1px 0 rgba(0, 0, 0, 0.1) inset;
+    min-height: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.navbar-fixed-top .navbar-inner, .navbar-fixed-bottom .navbar-inner {
+    border-radius: 0 0 0 0;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.navbar .brand {
+  color: #999999;
+  display: block;
+  float: left;
+  font-size: 20px;
+  font-weight: 200;
+  line-height: 1;
+  margin-left: -20px;
+  padding: 8px 20px 12px;
+}
+
+.container-fluid {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.container-fluid:before, .container-fluid:after {
+    content: "";
+    display: table;
+}
+
+.container-fluid:after {
+    clear: both;
+}
+
+.btn {
+  -moz-border-bottom-colors: none;
+  -moz-border-image: none;
+  -moz-border-left-colors: none;
+  -moz-border-right-colors: none;
+  -moz-border-top-colors: none;
+  border-radius: 4px 4px 4px 4px;
+  border-style: solid;
+  border-width: 1px;
+  color: #333333;
+  cursor: pointer;
+  font-size: 13px;
+  text-align: center;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+  vertical-align: middle;
+}
+
+.navbar .btn {
+  line-height: 18px;
+}
+
+.navbar .btn-navbar {
+  background-color: #2C2C2C;
+  background-image: -moz-linear-gradient(center top , #333333, #222222);
+  background-repeat: repeat-x;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1) inset, 0 1px 0 rgba(255, 255, 255, 0.075);
+  display: none;
+  float: right;
+  margin-left: 5px;
+  margin-right: 5px;
+  padding: 7px 10px;
+}
+
+.btn-group:before, .btn-group:after {
+  content: "";
+  display: table;
+}
+
+.navbar .btn-group {
+  margin: 0;
+  padding: 5px 5px 6px;
+}
+.navbar .btn-group .btn {
+  margin: 0;
+}
+.btn-group > .btn:first-child {
+  border-bottom-left-radius: 4px;
+  border-top-left-radius: 4px;
+}
+.navbar .btn {
+  display: inline-block;
+  line-height: 18px;
+  padding: 4px 10px;
+}
+
+.btn-group > .dropdown-toggle {
+  box-shadow: 1px 0 0 rgba(255, 255, 255, 0.125) inset, 0 1px 0 rgba(255, 255, 255, 0.2) inset, 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.btn-group > .btn:last-child, .btn-group > .dropdown-toggle {
+  border-bottom-right-radius: 4px;
+  border-top-right-radius: 4px;
+}
+
+.btn-group > .btn {
+  float: left;
+  position: relative;
+}
+
+.btn {
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+}
+
+
+.btn-group:after {
+  clear: both;
+}
+
+.dropdown-toggle {
+  
+}
+
+.navbar .nav {
+  display: block;
+  float: left;
+  left: 0;
+  margin: 0 10px 0 0;
+  position: relative;
+}
+
+.nav {
+  list-style: none outside none;
+}
+
+.navbar .nav > li {
+  display: block;
+  float: left;
+}
+
+li {
+  line-height: 18px;
+}
+.nav {
+  list-style: none outside none;
+}
